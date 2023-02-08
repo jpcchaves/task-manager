@@ -1,7 +1,11 @@
 package com.ws.taskmanager.controller;
 
+import com.ws.taskmanager.data.DTO.authdto.AuthResponse;
+import com.ws.taskmanager.data.DTO.authdto.LoginRequest;
+import com.ws.taskmanager.data.DTO.authdto.SignUpRequest;
 import com.ws.taskmanager.models.UserModel;
 import com.ws.taskmanager.security.WebSecurityConfig;
+import com.ws.taskmanager.services.UserService;
 import jakarta.validation.Valid;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
