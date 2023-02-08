@@ -8,6 +8,8 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -32,6 +34,9 @@ public class TaskModel implements Serializable {
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;
+
+    @ManyToOne
+    private UserModel user;
 
     public UUID getId() {
         return id;
@@ -73,15 +78,12 @@ public class TaskModel implements Serializable {
         this.createdAt = createdAt;
     }
 
-    @Override
-    public String toString() {
-        return "TaskModel{" +
-                "id=" + id +
-                ", task='" + task + '\'' +
-                ", deadline=" + deadline +
-                ", concluded=" + concluded +
-                ", createdAt=" + createdAt +
-                '}';
+    public UserModel getUser() {
+        return user;
+    }
+
+    public void setUser(UserModel user) {
+        this.user = user;
     }
 }
 
