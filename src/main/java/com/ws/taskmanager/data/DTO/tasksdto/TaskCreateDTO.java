@@ -1,4 +1,4 @@
-package com.ws.taskmanager.data.DTO;
+package com.ws.taskmanager.data.DTO.tasksdto;
 
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;

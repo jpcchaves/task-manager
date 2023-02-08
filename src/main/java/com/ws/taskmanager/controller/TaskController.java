@@ -1,10 +1,10 @@
 package com.ws.taskmanager.controller;
 
 
-import com.ws.taskmanager.data.DTO.TaskCreateDTO;
-import com.ws.taskmanager.data.DTO.TaskDTO;
-import com.ws.taskmanager.data.DTO.TaskPatchDTO;
-import com.ws.taskmanager.data.DTO.TaskResponseDTO;
+import com.ws.taskmanager.data.DTO.tasksdto.TaskCreateDTO;
+import com.ws.taskmanager.data.DTO.tasksdto.TaskDTO;
+import com.ws.taskmanager.data.DTO.tasksdto.TaskPatchDTO;
+import com.ws.taskmanager.data.DTO.tasksdto.TaskResponseDTO;
 import com.ws.taskmanager.services.TaskService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;

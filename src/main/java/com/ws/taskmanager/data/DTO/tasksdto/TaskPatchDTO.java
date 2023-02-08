@@ -1,13 +1,11 @@
-package com.ws.taskmanager.data.DTO;
+package com.ws.taskmanager.data.DTO.tasksdto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.dozermapper.core.Mapping;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.UUID;
 import org.springframework.hateoas.RepresentationModel;
-import org.yaml.snakeyaml.representer.Represent;
 
 public class TaskPatchDTO extends RepresentationModel<TaskResponseDTO> implements Serializable {
 

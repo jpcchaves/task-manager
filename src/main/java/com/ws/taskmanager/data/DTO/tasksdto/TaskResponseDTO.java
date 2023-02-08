@@ -1,4 +1,4 @@
-package com.ws.taskmanager.data.DTO;
+package com.ws.taskmanager.data.DTO.tasksdto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;

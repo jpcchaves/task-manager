@@ -1,10 +1,10 @@
 package com.ws.taskmanager.services;
 
 import com.ws.taskmanager.controller.TaskController;
-import com.ws.taskmanager.data.DTO.TaskCreateDTO;
-import com.ws.taskmanager.data.DTO.TaskDTO;
-import com.ws.taskmanager.data.DTO.TaskPatchDTO;
-import com.ws.taskmanager.data.DTO.TaskResponseDTO;
+import com.ws.taskmanager.data.DTO.tasksdto.TaskCreateDTO;
+import com.ws.taskmanager.data.DTO.tasksdto.TaskDTO;
+import com.ws.taskmanager.data.DTO.tasksdto.TaskPatchDTO;
+import com.ws.taskmanager.data.DTO.tasksdto.TaskResponseDTO;
 import com.ws.taskmanager.exceptions.ResourceNotFoundException;
 import com.ws.taskmanager.mapper.DozerMapper;
 import com.ws.taskmanager.models.TaskModel;
