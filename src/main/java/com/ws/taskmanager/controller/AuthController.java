@@ -3,6 +3,7 @@ package com.ws.taskmanager.controller;
 import com.ws.taskmanager.data.DTO.authdto.AuthResponse;
 import com.ws.taskmanager.data.DTO.authdto.LoginRequest;
 import com.ws.taskmanager.data.DTO.authdto.SignUpRequest;
+import com.ws.taskmanager.exceptions.DuplicatedUserInfoException;
 import com.ws.taskmanager.models.UserModel;
 import com.ws.taskmanager.security.WebSecurityConfig;
 import com.ws.taskmanager.services.UserService;
@@ -38,10 +39,10 @@ public class AuthController {
   @PostMapping("/signup")
   public AuthResponse signUp(@Valid @RequestBody SignUpRequest signUpRequest) {
     if (userService.hasUserWithUsername(signUpRequest.getUsername())) {
-      throw new DuplicatedUserInfoException(String.format("Username %s is already been used", signUpRequest.getUsername()));
+      throw new DuplicatedUserInfoException(String.format("Já existe um usuário com esse nome: %s", signUpRequest.getUsername()));
     }
     if (userService.hasUserWithEmail(signUpRequest.getEmail())) {
-      throw new DuplicatedUserInfoException(String.format("Email %s is already been used", signUpRequest.getEmail()));
+      throw new DuplicatedUserInfoException(String.format("Já existe um usuário cadastrado com o email informado: %s", signUpRequest.getEmail()));
     }
 
     UserModel user = userService.saveUser(createUser(signUpRequest));
